@@ -51,11 +51,7 @@ class EloquentUserRepository implements UserRepository
     {
         
     }
-
-    public function api_update($id, $data)
-    {
-
-    }
+ 
 
     public function delete($data)
     { 
