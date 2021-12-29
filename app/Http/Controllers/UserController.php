@@ -23,15 +23,7 @@ class UserController extends Controller
     
     public function index(Request $request)
     {
-        $search = [];
-        $search['name']         = $request->input('name');
-        $search['username']     = $request->input('username');
-        $search['email']        = $request->input('email'); 
-        $search['contact']      = $request->input('contact'); 
-        $search['speciality']      = $request->input('speciality'); 
-        $search['from_date']    = $request->input('from_date');
-        $search['to_date']      = $request->input('to_date'); 
-
+        $search = []; 
         $this->data                 = [];
         $this->data['collection']   = $this->userRepository->filtered($search)->paginate(10); 
         
